@@ -1,12 +1,53 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
 }
+
+body a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Smooth transition for link color */
+}
+
+body a:hover {
+    color: #0056b3; /* Hover color for links */
+}
+
+body button {
+    font-family: 'Arial', sans-serif; /* Inherit font family */
+    padding: 10px 20px; /* Improved button padding */
+    font-size: 16px; /* Increased button font size */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+body button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly larger size on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    body button {
+        font-size: 14px; /* Smaller font size for buttons on smaller screens */
+        padding: 8px 16px; /* Adjusted padding for smaller screens */
+    }
+}
+
 
 .container {
     max-width: 800px;
@@ -51,13 +92,21 @@ button {
     padding: 15px 25px; /* Increased padding */
     margin: 5px;
     border: none;
-    background-color: #4CAF50;
+    background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Multiple background colors */
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
     font-size: 18px; /* Increased font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
+
+button:hover {
+    background: linear-gradient(45deg, #45a049, #7cb342); /* Change gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
 
 button:hover {
     background-color: #45a049;
@@ -146,34 +195,45 @@ form button[type="submit"]:hover {
     font-size: 24px;
     text-align: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px; /* Increased padding for better spacing */
     border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: rgba(240, 240, 240, 0); /* Transparent */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    margin: 0 auto;
+    border-radius: 12px; /* Slightly more rounded corners */
+    background-color: rgba(240, 240, 240, 0.9); /* Slightly opaque background for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more prominent effect */
+    width: 80%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+    margin: 20px auto; /* Adjusted margin for better positioning */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
+
+#avgGradeResult:hover {
+    background-color: rgba(240, 240, 240, 1); /* Fully opaque background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
 
 #addForm, #updateForm {
     display: none;
-    background-color: rgba(240, 240, 240, 0); /* Transparent */
+    background-color: rgba(240, 240, 240, 0.9); /* Slightly opaque background for better readability */
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto; /* Added margin-top for better spacing */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 #addForm h2, #updateForm h2 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 24px; /* Slightly larger font size */
 }
 
 #addForm input, #addForm button, #updateForm input, #updateForm button {
     width: calc(100% - 22px);
-    padding: 12px;
+    padding: 14px; /* Slightly increased padding */
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -181,11 +241,18 @@ form button[type="submit"]:hover {
     transition: all 0.3s ease-in-out;
 }
 
+#addForm input:focus, #updateForm input:focus {
+    border-color: #007bff; /* Highlighted border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+
 #addForm button, #updateForm button {
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #addForm button:hover, #updateForm button:hover {
@@ -193,12 +260,19 @@ form button[type="submit"]:hover {
     transform: scale(1.05);
 }
 
+#addForm button:active, #updateForm button:active {
+    transform: scale(1); /* Remove scale effect on active */
+    background-color: #004085; /* Darker background on active */
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 600px) {
-    #updateForm {
+    #addForm, #updateForm {
         padding: 20px;
     }
     
+    #addForm input,
+    #addForm button,
     #updateForm input,
     #updateForm button {
         padding: 10px;
