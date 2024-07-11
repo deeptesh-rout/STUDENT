@@ -101,12 +101,119 @@ h1 {
 
 h2 {
     font-size: 20px; /* Font size for h2 */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Add letter spacing */
 }
 
 p {
     margin-bottom: 16px;
     line-height: 1.6;
 }
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Responsive image */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Placeholder styles */
+.placeholder {
+    color: #999;
+}
+
+/* Text highlight effect */
+.highlight {
+    background-color: #ffff66; /* Yellow background */
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+/* Flexbox container */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Example grid layout */
+    gap: 20px;
+}
+
+/* Custom form styles */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+}
+
+/* Responsive table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin-right: 5px;
+}
+
+.pagination li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pagination li a:hover {
+    background-color: #ddd;
+}
+
 
 .actions {
     display: flex;
