@@ -1,18 +1,21 @@
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Base font size */
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
     transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 body a {
     color: #007bff; /* Link color */
-    text-decoration: none;
+    text-decoration: underline; /* Underline links */
     transition: color 0.3s ease-in-out; /* Smooth transition for link color */
+    text-decoration-skip-ink: auto; /* Improves text-decoration rendering */
 }
 
 body a:hover {
@@ -28,12 +31,30 @@ body button {
     color: white;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for buttons */
+    text-transform: uppercase; /* Uppercase text */
+    outline: none; /* Remove outline for buttons */
 }
 
 body button:hover {
     background-color: #0056b3; /* Darker background on hover */
     transform: scale(1.05); /* Slightly larger size on hover */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Increased shadow on hover */
+}
+
+body button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+body button:active {
+    transform: translateY(1px); /* Pressed effect */
+    box-shadow: none; /* Remove shadow on active */
+}
+
+body button:disabled {
+    opacity: 0.6; /* Reduce opacity for disabled state */
+    cursor: not-allowed; /* Disable cursor */
 }
 
 /* Responsive adjustments */
@@ -59,6 +80,7 @@ body button:hover {
     transition: box-shadow 0.3s, transform 0.3s ease-in-out;
     font-family: Arial, sans-serif;
     color: #333;
+    margin-bottom: 30px; /* Increased bottom margin */
 }
 
 .container:hover {
@@ -77,6 +99,10 @@ h1 {
     font-size: 24px;
 }
 
+h2 {
+    font-size: 20px; /* Font size for h2 */
+}
+
 p {
     margin-bottom: 16px;
     line-height: 1.6;
@@ -87,6 +113,50 @@ p {
     justify-content: space-around;
     margin-bottom: 20px;
 }
+
+.actions button {
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    border-radius: 5px;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+    color: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+}
+
+.actions button:focus {
+    outline: none;
+}
+
+.actions button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.actions button:nth-child(even) {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.actions button:nth-child(even):hover {
+    background-color: #218838;
+}
+
+.actions button:nth-child(even) .icon {
+    margin-right: 8px;
+}
+
 
 button {
     padding: 15px 25px; /* Increased padding */
@@ -105,12 +175,6 @@ button:hover {
     background: linear-gradient(45deg, #45a049, #7cb342); /* Change gradient on hover */
     transform: scale(1.05); /* Slightly enlarge button on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
-}
-
-
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
 }
 
 button.gradient1 {
@@ -137,6 +201,7 @@ input[type="text"], input[type="number"], form input, form button {
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 14px; /* Smaller font size for inputs */
 }
 
 input[type="text"]:focus, input[type="number"]:focus, form input:focus, form button:focus {
@@ -170,6 +235,7 @@ form button[type="submit"]:hover {
     justify-content: space-between;
     align-items: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; /* Pointer cursor on list items */
 }
 
 #studentList li:hover {
@@ -211,7 +277,6 @@ form button[type="submit"]:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
     transform: translateY(-5px); /* Slight lift effect on hover */
 }
-
 
 #addForm, #updateForm {
     display: none;
