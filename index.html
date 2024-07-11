@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <div class="actions">
+            <button onclick="showAddForm()">1. Add Student</button>
+            <button onclick="displayStudents()">2. Display Students</button>
+            <button onclick="showAverageGrade()">3. Calculate Average Grade</button>
+            <button onclick="exitApplication()">4. Exit</button>
+        </div>
+        
+        <div id="addForm" style="display: none;">
+            <h2>Add Student</h2>
+            <input type="text" id="name" placeholder="Name"><br>
+            <input type="number" id="rollNumber" placeholder="Roll Number"><br>
+            <input type="number" id="age" placeholder="Age"><br>
+            <input type="number" id="grade" placeholder="Grade"><br>
+            <button onclick="addStudent()">Submit</button>
+        </div>
+        
+        <div id="displayStudents" style="display: none;">
+            <h2>Students</h2>
+            <ul id="studentList"></ul>
+        </div>
+        
+        <div id="averageGrade" style="display: none;">
+            <h2>Average Grade</h2>
+            <p id="avgGradeResult"></p>
+        </div>
+        
+        <div id="updateForm" style="display: none;">
+            <h2>Update Student</h2>
+            <input type="text" id="updateName" placeholder="Name"><br>
+            <input type="number" id="updateRollNumber" placeholder="Roll Number"><br>
+            <input type="number" id="updateAge" placeholder="Age"><br>
+            <input type="number" id="updateGrade" placeholder="Grade"><br>
+            <button id="updateFormSubmit">Update</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

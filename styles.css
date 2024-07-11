@@ -1,0 +1,288 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Example of styling specific elements */
+h1 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    transition: box-shadow 0.3s, transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container p {
+    line-height: 1.6;
+}
+
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.actions button,
+form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+}
+
+.actions button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.actions button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.actions button.gradient1 {
+    background-color: #4CAF50;
+    background-image: linear-gradient(45deg, #4CAF50, #45a049);
+}
+
+.actions button.gradient1:hover {
+    background-image: linear-gradient(45deg, #45a049, #3d904d);
+}
+
+.actions button.gradient2 {
+    background-color: #007bff;
+    background-image: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.actions button.gradient2:hover {
+    background-image: linear-gradient(45deg, #0056b3, #004d9c);
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input,
+form button {
+    padding: 10px;
+    margin: 5px 0;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+ul li::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ul li button {
+    float: right;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ul li button:hover {
+    background-color: #e53935;
+}
+
+#avgGradeResult {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 0 auto;
+}
+
+#addForm {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#addForm h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#addForm input,
+#addForm button {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+#addForm input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#addForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#addForm button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#updateForm {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#updateForm h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#updateForm input,
+#updateForm button {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+#updateForm input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#updateForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#updateForm button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    #updateForm {
+        padding: 20px;
+    }
+    
+    #updateForm input,
+    #updateForm button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
